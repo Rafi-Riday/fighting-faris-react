@@ -1,25 +1,24 @@
-import { infoToast, successToast } from './utilities/Toasts';
-import { ToastContainer } from 'react-toastify';
 
 function App() {
-
-  // toast theming
-  const contextClass = {
-    success: "bg-emerald-600",
-    info: "bg-blue-500",
-  };
-
   return (
     <div>
-      <div className="text-center text-warning">New Starting Page</div>
-      <button className='btn btn-info' onClick={() => infoToast('Done Nicely!')}>asd</button>
-      <button className='btn btn-success' onClick={() => successToast('Nicely Done!')}>asd</button>
-      {/* toast */}
-      <ToastContainer
-        toastClassName={({ type }) => contextClass[type || "info"] +
-          " relative flex p-1 min-h-10 rounded-xl justify-between overflow-hidden cursor-pointer py-4 px-3 mt-3"
-        }
-      />
+      <div className="drawer drawer-end drawer-mobile">
+        <input id="main-page-divider" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content">
+          {/* <!-- Page content here --> */}
+          <label htmlFor="main-page-divider" className="btn btn-info btn-sm text-xs lg:hidden">Open drawer</label>
+
+        </div>
+        <div className="drawer-side">
+          <label htmlFor="main-page-divider" className="drawer-overlay"></label>
+          <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+            {/* <!-- Sidebar content here --> */}
+            <li>Sidebar Item 1</li>
+            <li>Sidebar Item 2</li>
+          </ul>
+
+        </div>
+      </div>
     </div>
   );
 }
