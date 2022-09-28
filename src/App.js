@@ -2,7 +2,7 @@
 function App() {
   return (
     <div>
-      <div>New Starting Page</div>
+      <div className="text-center">New Starting Page</div>
     </div>
   );
 }
