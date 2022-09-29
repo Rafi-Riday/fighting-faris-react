@@ -1,21 +1,24 @@
+import Header from "./components/Header/Header";
+import SideBar from "./components/SideBar/SideBar";
 
 function App() {
+
   return (
     <div>
-      <div className="drawer drawer-end drawer-mobile">
+      <div className="main-site-drawer drawer drawer-end drawer-mobile">
         <input id="main-page-divider" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content">
+        <div className="drawer-content relative">
           {/* <!-- Page content here --> */}
-          <label htmlFor="main-page-divider" className="btn btn-info btn-sm text-xs lg:hidden">Open drawer</label>
+          <Header />
+          <h2>Select your today's fighting style practice</h2>
 
         </div>
         <div className="drawer-side">
           <label htmlFor="main-page-divider" className="drawer-overlay"></label>
-          <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+          <aside className="bg-gray-600">
             {/* <!-- Sidebar content here --> */}
-            <li>Sidebar Item 1</li>
-            <li>Sidebar Item 2</li>
-          </ul>
+            <SideBar />
+          </aside>
 
         </div>
       </div>
