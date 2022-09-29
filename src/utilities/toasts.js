@@ -27,7 +27,7 @@ export { infoToast, successToast };
 //     info: "bg-blue-500",
 //   };
 //
-// infoToast('Done Nicely!')
+// infoToast('Done Nicely!', 3000)
 //
 // {/* toast */}
 // <ToastContainer toastClassName={({ type }) => contextClass[type || "info"] + " relative flex p-1 min-h-10 rounded-xl justify-between overflow-hidden cursor-pointer py-4 px-3 mt-3"} />
