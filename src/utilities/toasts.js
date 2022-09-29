@@ -18,7 +18,7 @@ const successToast = (toastText, toastTime) => {
 export { infoToast, successToast };
 
 /* usage */
-// import { infoToast, successToast } from './utilities/toasts';
+// import { infoToast, successToast } from 'utilities/toasts';
 // import { ToastContainer } from 'react-toastify';
 //
 // // toast theming

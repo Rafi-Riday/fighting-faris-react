@@ -5,7 +5,7 @@ import logo from '../../img/logo.png';
 
 const Header = () => {
     return (
-        <header className="p-3 flex flex-row items-center justify-between sticky top-0 bg-gray-700">
+        <header className="z-50 p-3 flex flex-row items-center justify-between sticky top-0 bg-[#51617a]">
             <div className="flex flex-row items-center gap-3">
                 <img className="w-9" src={logo} alt="logo" />
                 <h1 className="text-3xl"><span className="text-[#ff8870]">Fighting</span> <span className="text-[#b1b1b1]">Faris</span></h1>

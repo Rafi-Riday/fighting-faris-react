@@ -13,7 +13,7 @@ function App() {
     <div>
       <div className="main-site-drawer drawer drawer-end drawer-mobile">
         <input id="main-page-divider" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content relative">
+        <div className="drawer-content relative bg-gray-700">
           {/* <!-- Page content here --> */}
           <Header />
           <br />
