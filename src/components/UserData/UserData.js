@@ -8,7 +8,7 @@ const UserData = () => {
         <div className="stat flex gap-2 items-center py-2 px-1">
             <div className="text-secondary">
                 <div className="avatar mt-2">
-                    <div className="w-14 rounded-full ring ring-[#c994d44b] ring-offset-[#917bbd] ring-offset-2">
+                    <div className="w-14 rounded-full ring ring-[#00867b2f] ring-offset-[#917bbd] ring-offset-2">
                         <img src={userImg} alt='' />
                     </div>
                 </div>

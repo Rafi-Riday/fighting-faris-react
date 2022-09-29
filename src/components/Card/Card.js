@@ -1,23 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { successToast } from '../../utilities/toasts';
 
-const Card = () => {
+const Card = ({ info }) => {
+    const { id, img, name, description, bestStartingAge, timeRequired, } = info;
+    const [btnTxt, setBtnTxt] = useState('Add to list');
     return (
         <div className="card w-full bg-slate-900 shadow-xl">
             <figure className="px-5 pt-6">
-                <img src="./img/judo.jpg" alt="User" className="rounded-xl" />
+                <img src={img} alt="User" className="rounded-xl" />
             </figure>
             <div className="card-body pt-5">
-                <h2 className="card-title">Shoes</h2>
-                <p className='text-gray-300'>
-                    If a dog chews shoes whose shoes does he choose?
-                    If a dog chews shoes whose shoes does he choose?
-                    If a dog chews shoes whose shoes does he choose?
-                </p>
-                <p><span className='font-semibold'>Starting Age :</span> <span className='text-gray-300'>20-25</span></p>
-                <p><span className='font-semibold'>Time required :</span> <span className='text-gray-300'>30 min</span></p>
+                <h2 className="card-title">{name}</h2>
+                <p className='text-gray-300'>{description}</p>
+                <p><span className='font-semibold'>Starting Age :</span> <span className='text-gray-300'>{bestStartingAge}</span></p>
+                <p><span className='font-semibold'>Time required :</span> <span className='text-gray-300'>{timeRequired} min</span></p>
                 <div className="card-actions">
-                    <button onClick={() => successToast('Added!', 300)} className="mt-5 btn btn-primary btn-block">Buy Now</button>
+                    <button id={id} onClick={(e) => { successToast('Added!', 300); setBtnTxt('Added') }} className="mt-5 btn rounded-xl bg-[#00867b] hover:bg-[#016d64] text-white btn-block">{btnTxt}</button>
                 </div>
             </div>
         </div>
