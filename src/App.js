@@ -3,6 +3,8 @@ import SideBar from "./components/SideBar/SideBar";
 import { ToastContainer } from 'react-toastify';
 import Cards from "./components/Cards/Cards";
 import { useEffect, useState } from "react";
+import Answers from "./components/Answers/Answers";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   // toast theming
@@ -10,22 +12,49 @@ function App() {
     success: "bg-[#00867b]",
     info: "bg-blue-500",
   };
-  // states
+
   const [dataMain, setDataMain] = useState([]);
-  const [userData, setUserData] = useState({});
-  // effects
   useEffect(() => {
     fetch('data.json')
       .then(res => res.json())
       .then(data => setDataMain(data))
   }, []);
-  // functions
-  const setUserDataBtn = (id) => {
-    const newUserData = { ...userData };
-    if (!userData.added) { userData.added = [] };
-    newUserData.added = [...userData.added, id];
-    setUserData(newUserData);
+
+  const userDataFromLS = localStorage.getItem('userData');
+  const [userData, setUserData] = useState({ time: 0, breakTime: 0, added: [], });
+  useEffect(() => {
+    if (JSON.parse(userDataFromLS)) {
+      setUserData(JSON.parse(userDataFromLS));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('userData', JSON.stringify(userData));
+  }, [userData]);
+
+  const setUserDataIdBtn = (command, param) => {
+
+    if (command === 'time') {
+      userData.time = userData.time + parseInt(param);
+      const newUserData = { ...userData };
+      setUserData(newUserData);
+    }
+
+    else if (command === 'breakTime') {
+      userData.breakTime = parseInt(param);
+      const newUserData = { ...userData };
+      setUserData(newUserData);
+    }
+
+    else if (command === 'added') {
+      if (!userData.added.includes(param)) { userData.added.push(param) }
+      const newUserData = { ...userData };
+      setUserData(newUserData);
+    }
   }
+
+  const resetUserData = () => setUserData({ time: 0, breakTime: 0, added: [], });
 
   return (
     <div>
@@ -36,13 +65,15 @@ function App() {
           <Header />
           <br />
           <h2 className="font-medium text-xl m-3">Select today's fighting style practice</h2>
-          <Cards data={dataMain} />
+          <Cards userData={userData.added} data={dataMain} interactLocalStorage={setUserDataIdBtn} />
+          <Answers />
+          <Footer />
         </div>
         <div className="drawer-side">
           <label htmlFor="main-page-divider" className="drawer-overlay"></label>
           <aside className="bg-gray-600">
             {/* <!-- Sidebar content here --> */}
-            <SideBar />
+            <SideBar resetUserData={resetUserData} userData={userData} interactLocalStorage={setUserDataIdBtn} />
           </aside>
         </div>
       </div>

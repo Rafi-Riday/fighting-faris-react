@@ -5,7 +5,7 @@
         "name": "Mixed Martial Arts",
         "description": "Mixed martial arts is as old as combat itself. It was practiced in various forms in ancient Greece, China, Egypt, India, Italy, and Japan. But the rules and regulations were different in each country.",
         "bestStartingAge": "13-16",
-        "timeRequired": "10"
+        "timeRequired": "30"
     },
     {
         "id": "fighting-type-2",
@@ -13,7 +13,7 @@
         "name": "Boxing",
         "description": "Boxing first appeared as a formal Olympic event in the 23rd Olympiad (688 BCE), but fist-fighting contests must certainly have had their origin in mankind’s prehistory.",
         "bestStartingAge": "9-10",
-        "timeRequired": "10"
+        "timeRequired": "30"
     },
     {
         "id": "fighting-type-3",
@@ -21,7 +21,7 @@
         "name": "Freestyle Wrestling",
         "description": "Freestyle wrestling has its greatest origins in catch-as-catch-can wrestling. In this style, the ultimate goal is to throw and pin the opponent to the mat, which results in an immediate win.",
         "bestStartingAge": "4-6",
-        "timeRequired": "15"
+        "timeRequired": "45"
     },
     {
         "id": "fighting-type-4",
@@ -29,7 +29,7 @@
         "name": "Judo",
         "description": "Judo came about from the mind of Japanese polymath Kano Jigoro in 1882. He originally created the art to teach physical and mental well-being, as well as to promote morality.",
         "bestStartingAge": "17-20",
-        "timeRequired": "5"
+        "timeRequired": "25"
     },
     {
         "id": "fighting-type-5",
@@ -37,7 +37,7 @@
         "name": "Kung Fu",
         "description": "Kung fu is responsible for the birth of many martial arts all throughout Asia. The style was created for self-defense, hunting, and military training in olden China.",
         "bestStartingAge": "4-10",
-        "timeRequired": "20"
+        "timeRequired": "55"
     },
     {
         "id": "fighting-type-6",
@@ -45,7 +45,7 @@
         "name": "Karate",
         "description": "Karate came to Japan in the early 20th century with the disenfranchised Ryukyuans.        The discipline was taught systematically in “The Land Of The Rising Sun” in the 1920s and 1930s.",
         "bestStartingAge": "5-20",
-        "timeRequired": "5"
+        "timeRequired": "25"
     },
     {
         "id": "fighting-type-7",
@@ -61,7 +61,7 @@
         "name": "Taekwondo",
         "description": "Taekwondo was developed in Korea between the 1940s and 1950s. This style focuses on head kicks, jumping kicks, spinning kicks, and other kicking techniques.",
         "bestStartingAge": "5-10",
-        "timeRequired": "5"
+        "timeRequired": "35"
     },
     {
         "id": "fighting-type-9",
@@ -69,6 +69,6 @@
         "name": "Lethwei",
         "description": "The ancient art of lethwei dates back to the 2nd century, when the Pyu Empire controlled much of Myanmar. Original matches were held only for entertainment.",
         "bestStartingAge": "8-10",
-        "timeRequired": "15"
+        "timeRequired": "45"
     }
 ]
